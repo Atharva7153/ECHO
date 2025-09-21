@@ -1,7 +1,8 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
 const User = require("./models/User");
 
-mongoose.connect("mongodb+srv://AtharvaS7153:ddskdhf123@atharvadb.olmumix.mongodb.net/", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/echo-v2", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
